@@ -1,0 +1,17 @@
+type Query {
+    shows(titleFilter: String): [Show]
+    actorList: [ActorEntity]
+    findOneActor(id : ID!): ActorEntity
+}
+
+type Show {
+    title: String
+    releaseYear: Int
+}
+
+type ActorEntity {
+    actorId: ID!
+    firstName: String!
+    lastName: String!
+    lastUpdate: String
+}
